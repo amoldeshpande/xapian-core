@@ -1,0 +1,19 @@
+
+
+set(XAPIAN_VERSION "\"1.4.9\"")
+set(XAPIAN_MAJOR_VERSION 1)
+set(XAPIAN_MINOR_VERSION 4)
+set(XAPIAN_REVISION 9)
+set(XAPIAN_DOCID_BASE_TYPE long\ long)
+set(XAPIAN_TERMCOUNT_BASE_TYPE long\ long)
+set(XAPIAN_TERMPOS_BASE_TYPE long\ long)
+set(XAPIAN_TOTALLENGTH_TYPE unsigned\ long\ long)
+set(XAPIAN_REVISION_TYPE unsigned\ long\ long)
+
+option(XAPIAN_HAS_CHERT_BACKEND "" ${BUILD_BACKEND_CHERT})
+option(XAPIAN_HAS_GLASS_BACKEND "" ${BUILD_BACKEND_GLASS})
+option(XAPIAN_HAS_INMEMORY_BACKEND "" ${BUILD_BACKEND_INMEMORY})
+option(XAPIAN_HAS_REMOTE_BACKEND "" ${BUILD_BACKEND_REMOTE})
+configure_file(version.h.in.cmake include/xapian/version.h @ONLY)
+
+

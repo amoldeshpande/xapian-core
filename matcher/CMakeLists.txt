@@ -1,0 +1,57 @@
+
+target_sources(libxapian PRIVATE
+	${CMAKE_CURRENT_LIST_DIR}/andmaybepostlist.h
+	${CMAKE_CURRENT_LIST_DIR}/andnotpostlist.h
+	${CMAKE_CURRENT_LIST_DIR}/branchpostlist.h
+	${CMAKE_CURRENT_LIST_DIR}/collapser.h
+	${CMAKE_CURRENT_LIST_DIR}/exactphrasepostlist.h
+	${CMAKE_CURRENT_LIST_DIR}/externalpostlist.h
+	${CMAKE_CURRENT_LIST_DIR}/extraweightpostlist.h
+	${CMAKE_CURRENT_LIST_DIR}/localsubmatch.h
+	${CMAKE_CURRENT_LIST_DIR}/maxpostlist.h
+	${CMAKE_CURRENT_LIST_DIR}/mergepostlist.h
+	${CMAKE_CURRENT_LIST_DIR}/msetcmp.h
+	${CMAKE_CURRENT_LIST_DIR}/msetpostlist.h
+	${CMAKE_CURRENT_LIST_DIR}/multiandpostlist.h
+	${CMAKE_CURRENT_LIST_DIR}/multimatch.h
+	${CMAKE_CURRENT_LIST_DIR}/multixorpostlist.h
+	${CMAKE_CURRENT_LIST_DIR}/nearpostlist.h
+	${CMAKE_CURRENT_LIST_DIR}/orpositionlist.h
+	${CMAKE_CURRENT_LIST_DIR}/orpospostlist.h
+	${CMAKE_CURRENT_LIST_DIR}/orpostlist.h
+	${CMAKE_CURRENT_LIST_DIR}/phrasepostlist.h
+	${CMAKE_CURRENT_LIST_DIR}/queryoptimiser.h
+	${CMAKE_CURRENT_LIST_DIR}/remotesubmatch.h
+	${CMAKE_CURRENT_LIST_DIR}/selectpostlist.h
+	${CMAKE_CURRENT_LIST_DIR}/synonympostlist.h
+	${CMAKE_CURRENT_LIST_DIR}/valuegepostlist.h
+	${CMAKE_CURRENT_LIST_DIR}/valuerangepostlist.h
+	${CMAKE_CURRENT_LIST_DIR}/valuestreamdocument.h
+	${CMAKE_CURRENT_LIST_DIR}/andmaybepostlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/andnotpostlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/branchpostlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/collapser.cc
+	${CMAKE_CURRENT_LIST_DIR}/exactphrasepostlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/externalpostlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/localsubmatch.cc
+	${CMAKE_CURRENT_LIST_DIR}/maxpostlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/mergepostlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/msetcmp.cc
+	${CMAKE_CURRENT_LIST_DIR}/msetpostlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/multiandpostlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/multimatch.cc
+	${CMAKE_CURRENT_LIST_DIR}/multixorpostlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/nearpostlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/orpositionlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/orpospostlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/orpostlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/phrasepostlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/selectpostlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/synonympostlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/valuegepostlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/valuerangepostlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/valuestreamdocument.cc)
+
+#if(BUILD_BACKEND_REMOTE)
+target_sources(libxapian PRIVATE ${CMAKE_CURRENT_LIST_DIR}/remotesubmatch.cc)
+#endif()

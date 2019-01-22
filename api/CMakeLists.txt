@@ -1,0 +1,54 @@
+
+target_sources(libxapian
+	PRIVATE 
+	${CMAKE_CURRENT_LIST_DIR}/documentterm.h 
+	${CMAKE_CURRENT_LIST_DIR}/documentvaluelist.h 
+	${CMAKE_CURRENT_LIST_DIR}/editdistance.h 
+	${CMAKE_CURRENT_LIST_DIR}/emptypostlist.h
+	${CMAKE_CURRENT_LIST_DIR}/leafpostlist.h 
+	${CMAKE_CURRENT_LIST_DIR}/maptermlist.h 
+	${CMAKE_CURRENT_LIST_DIR}/omenquireinternal.h 
+	${CMAKE_CURRENT_LIST_DIR}/postlist.h 
+	${CMAKE_CURRENT_LIST_DIR}/queryinternal.h 
+	${CMAKE_CURRENT_LIST_DIR}/queryvector.h
+	${CMAKE_CURRENT_LIST_DIR}/replication.h 
+	${CMAKE_CURRENT_LIST_DIR}/smallvector.h 
+	${CMAKE_CURRENT_LIST_DIR}/termlist.h 
+	${CMAKE_CURRENT_LIST_DIR}/vectortermlist.h
+	${CMAKE_CURRENT_LIST_DIR}/compactor.cc
+	${CMAKE_CURRENT_LIST_DIR}/constinfo.cc
+	${CMAKE_CURRENT_LIST_DIR}/decvalwtsource.cc
+	${CMAKE_CURRENT_LIST_DIR}/documentvaluelist.cc
+	${CMAKE_CURRENT_LIST_DIR}/editdistance.cc
+	${CMAKE_CURRENT_LIST_DIR}/emptypostlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/error.cc
+	${CMAKE_CURRENT_LIST_DIR}/errorhandler.cc
+	${CMAKE_CURRENT_LIST_DIR}/expanddecider.cc
+	${CMAKE_CURRENT_LIST_DIR}/keymaker.cc
+	${CMAKE_CURRENT_LIST_DIR}/leafpostlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/matchspy.cc
+	${CMAKE_CURRENT_LIST_DIR}/omdatabase.cc
+	${CMAKE_CURRENT_LIST_DIR}/omdocument.cc
+	${CMAKE_CURRENT_LIST_DIR}/omenquire.cc
+	${CMAKE_CURRENT_LIST_DIR}/positioniterator.cc
+	${CMAKE_CURRENT_LIST_DIR}/postingiterator.cc
+	${CMAKE_CURRENT_LIST_DIR}/postingsource.cc
+	${CMAKE_CURRENT_LIST_DIR}/postlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/query.cc
+	${CMAKE_CURRENT_LIST_DIR}/queryinternal.cc
+	${CMAKE_CURRENT_LIST_DIR}/registry.cc
+	${CMAKE_CURRENT_LIST_DIR}/smallvector.cc
+	${CMAKE_CURRENT_LIST_DIR}/sortable-serialise.cc
+	${CMAKE_CURRENT_LIST_DIR}/termiterator.cc
+	${CMAKE_CURRENT_LIST_DIR}/termlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/valueiterator.cc
+	${CMAKE_CURRENT_LIST_DIR}/valuerangeproc.cc
+	${CMAKE_CURRENT_LIST_DIR}/valuesetmatchdecider.cc
+	${CMAKE_CURRENT_LIST_DIR}/vectortermlist.cc)
+
+if(BUILD_BACKEND_REMOTE)
+target_sources(libxapian
+	PRIVATE 
+	${CMAKE_CURRENT_LIST_DIR}/replication.cc
+	)
+endif()

@@ -1,0 +1,61 @@
+if(BUILD_BACKEND_GLASS)
+target_sources(libxapian
+	PRIVATE
+	${CMAKE_CURRENT_LIST_DIR}/glass_alldocspostlist.h
+	${CMAKE_CURRENT_LIST_DIR}/glass_alltermslist.h
+	${CMAKE_CURRENT_LIST_DIR}/glass_changes.h
+	${CMAKE_CURRENT_LIST_DIR}/glass_check.h
+	${CMAKE_CURRENT_LIST_DIR}/glass_cursor.h
+	${CMAKE_CURRENT_LIST_DIR}/glass_database.h
+	${CMAKE_CURRENT_LIST_DIR}/glass_databasereplicator.h
+	${CMAKE_CURRENT_LIST_DIR}/glass_dbcheck.h
+	${CMAKE_CURRENT_LIST_DIR}/glass_defs.h
+	${CMAKE_CURRENT_LIST_DIR}/glass_docdata.h
+	${CMAKE_CURRENT_LIST_DIR}/glass_document.h
+	${CMAKE_CURRENT_LIST_DIR}/glass_freelist.h
+	${CMAKE_CURRENT_LIST_DIR}/glass_inverter.h
+	${CMAKE_CURRENT_LIST_DIR}/glass_lazytable.h
+	${CMAKE_CURRENT_LIST_DIR}/glass_metadata.h
+	${CMAKE_CURRENT_LIST_DIR}/glass_positionlist.h
+	${CMAKE_CURRENT_LIST_DIR}/glass_postlist.h
+	${CMAKE_CURRENT_LIST_DIR}/glass_replicate_internal.h
+	${CMAKE_CURRENT_LIST_DIR}/glass_spelling.h
+	${CMAKE_CURRENT_LIST_DIR}/glass_spellingwordslist.h
+	${CMAKE_CURRENT_LIST_DIR}/glass_synonym.h
+	${CMAKE_CURRENT_LIST_DIR}/glass_table.h
+	${CMAKE_CURRENT_LIST_DIR}/glass_termlist.h
+	${CMAKE_CURRENT_LIST_DIR}/glass_termlisttable.h
+	${CMAKE_CURRENT_LIST_DIR}/glass_valuelist.h
+	${CMAKE_CURRENT_LIST_DIR}/glass_values.h
+	${CMAKE_CURRENT_LIST_DIR}/glass_version.h
+	${CMAKE_CURRENT_LIST_DIR}/glass_alldocspostlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/glass_alltermslist.cc
+	${CMAKE_CURRENT_LIST_DIR}/glass_changes.cc
+	${CMAKE_CURRENT_LIST_DIR}/glass_check.cc
+	${CMAKE_CURRENT_LIST_DIR}/glass_compact.cc
+	${CMAKE_CURRENT_LIST_DIR}/glass_cursor.cc
+	${CMAKE_CURRENT_LIST_DIR}/glass_database.cc
+	${CMAKE_CURRENT_LIST_DIR}/glass_dbcheck.cc
+	${CMAKE_CURRENT_LIST_DIR}/glass_document.cc
+	${CMAKE_CURRENT_LIST_DIR}/glass_freelist.cc
+	${CMAKE_CURRENT_LIST_DIR}/glass_inverter.cc
+	${CMAKE_CURRENT_LIST_DIR}/glass_metadata.cc
+	${CMAKE_CURRENT_LIST_DIR}/glass_positionlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/glass_postlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/glass_spelling.cc
+	${CMAKE_CURRENT_LIST_DIR}/glass_spellingwordslist.cc
+	${CMAKE_CURRENT_LIST_DIR}/glass_synonym.cc
+	${CMAKE_CURRENT_LIST_DIR}/glass_table.cc
+	${CMAKE_CURRENT_LIST_DIR}/glass_termlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/glass_termlisttable.cc
+	${CMAKE_CURRENT_LIST_DIR}/glass_valuelist.cc
+	${CMAKE_CURRENT_LIST_DIR}/glass_values.cc
+	${CMAKE_CURRENT_LIST_DIR}/glass_version.cc)
+
+if(BUILD_BACKEND_REMOTE)
+target_sources(libxapian
+	PRIVATE
+	${CMAKE_CURRENT_LIST_DIR}/glass_databasereplicator.cc)
+endif()
+
+endif()

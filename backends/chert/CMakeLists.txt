@@ -1,0 +1,64 @@
+if(BUILD_BACKEND_CHERT)
+target_sources(libxapian
+	PRIVATE
+	${CMAKE_CURRENT_LIST_DIR}/chert_alldocsmodifiedpostlist.h
+	${CMAKE_CURRENT_LIST_DIR}/chert_alldocspostlist.h
+	${CMAKE_CURRENT_LIST_DIR}/chert_alltermslist.h
+	${CMAKE_CURRENT_LIST_DIR}/chert_btreebase.h
+	${CMAKE_CURRENT_LIST_DIR}/chert_check.h
+	${CMAKE_CURRENT_LIST_DIR}/chert_cursor.h
+	${CMAKE_CURRENT_LIST_DIR}/chert_database.h
+	${CMAKE_CURRENT_LIST_DIR}/chert_databasereplicator.h
+	${CMAKE_CURRENT_LIST_DIR}/chert_dbcheck.h
+	${CMAKE_CURRENT_LIST_DIR}/chert_dbstats.h
+	${CMAKE_CURRENT_LIST_DIR}/chert_document.h
+	${CMAKE_CURRENT_LIST_DIR}/chert_lazytable.h
+	${CMAKE_CURRENT_LIST_DIR}/chert_metadata.h
+	${CMAKE_CURRENT_LIST_DIR}/chert_modifiedpostlist.h
+	${CMAKE_CURRENT_LIST_DIR}/chert_positionlist.h
+	${CMAKE_CURRENT_LIST_DIR}/chert_postlist.h
+	${CMAKE_CURRENT_LIST_DIR}/chert_record.h
+	${CMAKE_CURRENT_LIST_DIR}/chert_replicate_internal.h
+	${CMAKE_CURRENT_LIST_DIR}/chert_spelling.h
+	${CMAKE_CURRENT_LIST_DIR}/chert_spellingwordslist.h
+	${CMAKE_CURRENT_LIST_DIR}/chert_synonym.h
+	${CMAKE_CURRENT_LIST_DIR}/chert_table.h
+	${CMAKE_CURRENT_LIST_DIR}/chert_termlist.h
+	${CMAKE_CURRENT_LIST_DIR}/chert_termlisttable.h
+	${CMAKE_CURRENT_LIST_DIR}/chert_types.h
+	${CMAKE_CURRENT_LIST_DIR}/chert_valuelist.h
+	${CMAKE_CURRENT_LIST_DIR}/chert_values.h
+	${CMAKE_CURRENT_LIST_DIR}/chert_version.h
+	${CMAKE_CURRENT_LIST_DIR}/chert_alldocsmodifiedpostlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/chert_alldocspostlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/chert_alltermslist.cc
+	${CMAKE_CURRENT_LIST_DIR}/chert_btreebase.cc
+	${CMAKE_CURRENT_LIST_DIR}/chert_check.cc
+	${CMAKE_CURRENT_LIST_DIR}/chert_compact.cc
+	${CMAKE_CURRENT_LIST_DIR}/chert_cursor.cc
+	${CMAKE_CURRENT_LIST_DIR}/chert_database.cc
+	${CMAKE_CURRENT_LIST_DIR}/chert_dbcheck.cc
+	${CMAKE_CURRENT_LIST_DIR}/chert_dbstats.cc
+	${CMAKE_CURRENT_LIST_DIR}/chert_document.cc
+	${CMAKE_CURRENT_LIST_DIR}/chert_metadata.cc
+	${CMAKE_CURRENT_LIST_DIR}/chert_modifiedpostlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/chert_positionlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/chert_postlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/chert_record.cc
+	${CMAKE_CURRENT_LIST_DIR}/chert_spelling.cc
+	${CMAKE_CURRENT_LIST_DIR}/chert_spellingwordslist.cc
+	${CMAKE_CURRENT_LIST_DIR}/chert_synonym.cc
+	${CMAKE_CURRENT_LIST_DIR}/chert_table.cc
+	${CMAKE_CURRENT_LIST_DIR}/chert_termlist.cc
+	${CMAKE_CURRENT_LIST_DIR}/chert_termlisttable.cc
+	${CMAKE_CURRENT_LIST_DIR}/chert_valuelist.cc
+	${CMAKE_CURRENT_LIST_DIR}/chert_values.cc
+	${CMAKE_CURRENT_LIST_DIR}/chert_version.cc)
+
+if(BUILD_BACKEND_REMOTE)
+target_sources(libxapian
+	PRIVATE
+	${CMAKE_CURRENT_LIST_DIR}/chert_databasereplicator.cc)
+endif()
+
+endif()

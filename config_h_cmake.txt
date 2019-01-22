@@ -1,0 +1,31 @@
+INCLUDE (CheckIncludeFiles)
+
+option(HAVE_CX11 ON)
+CHECK_INCLUDE_FILES(cxxabi.h HAVE_CXXABI_H)
+CHECK_INCLUDE_FILES(stdint.h HAVE_STDINT_H)
+CHECK_INCLUDE_FILES(zlib.h HAVE_ZLIB_H)
+
+set(PACKAGE "\"xapian-core\"")
+set(PACKAGE_BUGS "\"http://xapian.org/bugs\"")
+set(PACKAGE_NAME "\"xapian-core\"")
+set(PACKAGE_STRING "\"xapian-core 1.4.9\"")
+set(PACKAGE_TARNAME "\"xapian-core\"")
+set(PACKAGE_URL "\"\"")
+set(PACKAGE_VERSION "\"1.4.9\"")
+
+set(DIR_SEPS "'\\\\'")
+set(DIR_SEPS_LIST "{'/','\\\\'}")
+set(SIZEOF_INT 4)
+set(SIZEOF_LONG 4)
+set(SIZEOF_LONG_LONG 8)
+set(SIZEOF_SHORT 2)
+
+set(SOCKLEN_T int)
+
+
+set(USE_WIN32_UUID_API 1)
+set(XAPIAN_ASSERTIONS 1)
+set(XAPIAN_ASSERTIONS_PARANOID 1)
+#set(XAPIAN_DEBUG_LOG 1)
+configure_file(config.h.in.cmake config.h @ONLY)
+

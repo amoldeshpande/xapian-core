@@ -1,0 +1,11 @@
+target_sources(libxapian
+	PRIVATE
+	${CMAKE_CURRENT_LIST_DIR}/cjk-tokenizer.h
+	${CMAKE_CURRENT_LIST_DIR}/queryparser_internal.h
+	${CMAKE_CURRENT_LIST_DIR}/queryparser_token.h
+	${CMAKE_CURRENT_LIST_DIR}/termgenerator_internal.h
+	${CMAKE_CURRENT_LIST_DIR}/cjk-tokenizer.cc
+	${CMAKE_CURRENT_LIST_DIR}/queryparser.cc
+	${CMAKE_CURRENT_LIST_DIR}/queryparser_internal.cc
+	${CMAKE_CURRENT_LIST_DIR}/termgenerator.cc
+	${CMAKE_CURRENT_LIST_DIR}/termgenerator_internal.cc)
